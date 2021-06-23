@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/wangjie-fourth/ui-enjoy/issues"
   },
-  "homepage": "https://github.com/wangjie-fourth/ui-enjoy#readme"
+  "homepage": "https://github.com/wangjie-fourth/ui-enjoy#readme",
+  "dependencies": {
+    "vue": "^2.6.14"
+  }
 }
