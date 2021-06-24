@@ -8,9 +8,13 @@
     <title>ui-enjoy</title>
 
     <style>
-        *{margin: 0; padding: 0; box-sizing: border-box;}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
 
-        :root{
+        :root {
             --button-height: 32px;
             --font-size: 14px;
             --button-bg: white;
@@ -21,19 +25,29 @@
             --border-color-hover: #666;
         }
 
-        #app{
+        #app {
             margin: 20px;
         }
-        body{
+
+        body {
             font-size: var(--font-size);
+        }
+    </style>
+    <style>
+        .icon {
+            width: 1em;
+            height: 1em;
         }
     </style>
 </head>
 <body>
-    <div id="app">
-        <g-button></g-button>
-    </div>
+<div id="app">
+    <g-button icon="settings" icon-position="right">
+        测试按钮
+    </g-button>
+</div>
 
 <script src="./src/app.js"></script>
+<script src="//at.alicdn.com/t/font_2632070_o1t9loh8nkn.js"></script>
 </body>
 </html>
