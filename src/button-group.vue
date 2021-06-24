@@ -25,7 +25,10 @@
         > .g-button {
             border-radius: 0;
 
-            margin-left: -1px;
+            &:not(:first-child) {
+                margin-left: -1px;
+            }
+
             &:hover {
                 position: relative;
                 z-index: 1;
