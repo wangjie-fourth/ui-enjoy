@@ -13,6 +13,7 @@
 <script>
     import Icon from './icon'
     export default {
+        name: "enjoy-button",
         components: {
             'g-icon': Icon,
         },

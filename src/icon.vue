@@ -6,8 +6,8 @@
 
 <script>
     export default {
+        name: "enjoy-icon",
         props: ['name'],
-        name: "icon"
     }
 </script>
 
