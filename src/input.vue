@@ -1,6 +1,11 @@
 <template>
     <div class="wrapper" :class="{'error': error}">
-        <input :value="value" type="text" :disabled="disabled" :readonly="readonly">
+        <input :value="value" type="text" :disabled="disabled" :readonly="readonly"
+               @change="$emit('change', $event.target.value)"
+               @input="$emit('input', $event.target.value)"
+               @focus="$emit('focus', $event.target.value)"
+               @blur="$emit('blur', $event.target.value)">
+
         <template v-if="error">
             <Icon name="error"></Icon>
             <span class="errorMessage">{{error}}</span>
@@ -10,6 +15,7 @@
 
 <script>
     import Icon from './icon'
+
     export default {
         name: "enjoy-input",
         props: {
@@ -28,7 +34,7 @@
                 type: String
             }
         },
-        components:{
+        components: {
             Icon
         }
     }
@@ -57,7 +63,7 @@
         display: inline-flex;
         align-items: center;
 
-        > :not(:last-child){
+        > :not(:last-child) {
             margin-right: .5em;
         }
 
@@ -75,18 +81,21 @@
                 box-shadow: inset 0 1px 3px $box-shadow-color;
                 outline: none; // 去除外边框样式
             }
-            &[disabled], &[readonly]{
+
+            &[disabled], &[readonly] {
                 border-color: #bbb;
                 color: #bbb;
                 cursor: not-allowed;
             }
         }
+
         &.error {
             > input {
                 border-color: $red;
             }
         }
-        .errorMessage{
+
+        .errorMessage {
             color: $red;
         }
     }
